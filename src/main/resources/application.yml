@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: spring-ai-tutorial
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      embedding:
+        options:
+          model: text-embedding-3-small
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+management:
+  endpoints:
+    enabled-by-default: false        # actuator 엔드포인트 기본 전체 비활성화 (화이트리스트 방식)
+    jmx:
+      exposure:
+        exclude: "*"                 # JMX 경로로도 정보 노출 안 되도록 차단
+    web:
+      base-path: /monitor            # actuator 기본 경로 변경
+      exposure:
+        include: health, prometheus  # 필요한 엔드포인트만 명시적으로 오픈
+  endpoint:
+    prometheus:
+      enabled: true                  # prometheus 엔드포인트 활성화
+    health:
+      enabled: true
+  server:
+    port: 9091                       # actuator 전용 포트 분리
+
+server:
+  port: 8080
+  tomcat:
+    mbeanregistry:
+      enabled: true                  # tomcat 스레드풀 등 세부 메트릭 수집 가능하게 설정
+
+springdoc:
+  api-docs:
+    path: /api-docs

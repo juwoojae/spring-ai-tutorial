@@ -22,6 +22,8 @@ extra["springAiVersion"] = "1.0.0-M6"
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+    runtimeOnly("io.micrometer:micrometer-registry-prometheus")
 
     // Kotlin 지원
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
