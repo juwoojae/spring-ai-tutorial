@@ -21,11 +21,13 @@ management:
     web:
       base-path: /monitor            # actuator 기본 경로 변경
       exposure:
-        include: health, prometheus  # 필요한 엔드포인트만 명시적으로 오픈
+        include: health, prometheus, metrics  # 필요한 엔드포인트만 명시적으로 오픈
   endpoint:
     prometheus:
       enabled: true                  # prometheus 엔드포인트 활성화
     health:
+      enabled: true
+    metrics:
       enabled: true
   server:
     port: 9091                       # actuator 전용 포트 분리
