@@ -1,16 +1,11 @@
-# Prometheus 기본 설정 파일
-# Spring Boot의 /monitor/prometheus 엔드포인트에서 메트릭을 가져온다.
-
+# Prometheus의 공통 수집 설정
 global:
-  scrape_interval: 15s       # 메트릭을 수집하는 주기
-  evaluation_interval: 15s   # 알림 및 기록 규칙을 평가하는 주기
+  scrape_interval: 15s # 모든 수집 대상에서 메트릭을 가져오는 기본 주기
 
+# Prometheus가 메트릭을 수집할 대상 목록
 scrape_configs:
-  - job_name: "spring-ai-tutorial" # Prometheus에서 표시할 수집 작업 이름
-    metrics_path: "/monitor/prometheus" # application.yml에서 변경한 Actuator Prometheus 경로
+  - job_name: "spring-ai-tutorial" # Prometheus 화면에서 식별할 작업 이름
+    metrics_path: "/monitor/prometheus" # Spring Boot Actuator의 Prometheus 엔드포인트
     static_configs:
-      - targets:
-          - "spring-ai:9091" # Docker 서비스 이름과 Actuator 전용 포트
-        labels:
-          env: "local"       # 현재 실행 환경을 구분하는 라벨
-          app: "spring-ai-tutorial" # 애플리케이션을 구분하는 라벨
+      - targets: # 고정된 수집 대상 목록
+          - "spring-ai-tutorial.duckdns.org/:9091" # Docker 서비스명과 Actuator 전용 포트
