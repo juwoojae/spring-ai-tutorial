@@ -8,4 +8,4 @@ scrape_configs:
     metrics_path: "/monitor/prometheus" # Spring Boot Actuator의 Prometheus 엔드포인트
     static_configs:
       - targets: # 고정된 수집 대상 목록
-          - "spring-ai:9091"  # Docker Compose 서비스 이름과 컨테이너 내부 포트를 사용한다.
+          - "spring-ai-tutorial.duckdns.org:9091"  # Docker Compose 서비스 이름과 컨테이너 내부 포트를 사용한다.
