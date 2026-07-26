@@ -8,4 +8,4 @@ scrape_configs:
     metrics_path: "/monitor/prometeus" # 외부 공개 주소와 동일한 엔드포인트
     static_configs:
       - targets: # 고정된 수집 대상 목록
-          - "spring-ai:9091"  # 동일 Docker 네트워크의 Spring AI 서비스 이름과 내부 포트
+          - "spring-ai-tutorial.duckdns.org:9091"  # DuckDNS 주소와 외부 공개 포트
