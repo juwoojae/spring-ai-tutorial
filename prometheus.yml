@@ -5,7 +5,7 @@ global:
 # Prometheus가 메트릭을 수집할 대상 목록
 scrape_configs:
   - job_name: "spring-ai-tutorial" # Prometheus 화면에서 식별할 작업 이름
-    metrics_path: "/monitor/prometeus" # 외부 공개 주소와 동일한 엔드포인트
+    metrics_path: "/monitor/prometheus" # 외부 공개 주소와 동일한 엔드포인트
     static_configs:
       - targets: # 고정된 수집 대상 목록
-          - "spring-ai-tutorial.duckdns.org:9091"  # DuckDNS 주소와 외부 공개 포트
+          - "spring-ai:9091"  # DuckDNS 주소와 외부 공개 포트
