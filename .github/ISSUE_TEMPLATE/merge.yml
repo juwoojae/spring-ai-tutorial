@@ -1,0 +1,23 @@
+name: "Merge"
+description: "브랜치 또는 변경사항 병합 작업에 사용합니다."
+title: "Merge: "
+labels: ["Merge"]
+type: Task
+body:
+  - type: textarea
+    id: overview
+    attributes:
+      label: "Issue 요약"
+      placeholder: "예: 릴리스 브랜치의 변경사항을 메인 브랜치에 병합합니다."
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Issue 상세"
+      placeholder: "병합 대상, 목적, 충돌 또는 주의사항을 작성해 주세요."
+  - type: textarea
+    id: todo
+    attributes:
+      label: "To do"
+      placeholder: "예: - [ ] 충돌 해결 및 회귀 테스트"

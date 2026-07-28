@@ -1,0 +1,23 @@
+name: "Docs"
+description: "README, API 명세 등 문서 작업에 사용합니다."
+title: "Docs: "
+labels: ["Docs"]
+type: Task
+body:
+  - type: textarea
+    id: overview
+    attributes:
+      label: "Issue 요약"
+      placeholder: "예: 로컬 실행 방법을 README에 추가합니다."
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Issue 상세"
+      placeholder: "문서 변경이 필요한 배경과 범위를 작성해 주세요."
+  - type: textarea
+    id: todo
+    attributes:
+      label: "To do"
+      placeholder: "예: - [ ] 환경 변수 설명 추가"

@@ -1,0 +1,23 @@
+name: "Remove"
+description: "사용하지 않는 코드, 기능, 파일 제거에 사용합니다."
+title: "Remove: "
+labels: ["Remove"]
+type: Task
+body:
+  - type: textarea
+    id: overview
+    attributes:
+      label: "Issue 요약"
+      placeholder: "예: 더 이상 사용하지 않는 레거시 API를 제거합니다."
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Issue 상세"
+      placeholder: "제거 대상, 제거 사유, 영향 범위를 작성해 주세요."
+  - type: textarea
+    id: todo
+    attributes:
+      label: "To do"
+      placeholder: "예: - [ ] 참조 여부 확인 후 코드 제거"

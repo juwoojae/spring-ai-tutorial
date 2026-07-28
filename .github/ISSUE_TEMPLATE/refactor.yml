@@ -1,0 +1,23 @@
+name: "Refactor"
+description: "기능 변경 없는 코드 구조 개선에 사용합니다."
+title: "Refactor: "
+labels: ["Refactor"]
+type: Task
+body:
+  - type: textarea
+    id: overview
+    attributes:
+      label: "Issue 요약"
+      placeholder: "예: 추천 서비스의 책임을 작은 컴포넌트로 분리합니다."
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Issue 상세"
+      placeholder: "현재 문제점, 개선 방향, 변경하지 않을 동작을 작성해 주세요."
+  - type: textarea
+    id: todo
+    attributes:
+      label: "To do"
+      placeholder: "예: - [ ] 서비스 책임 분리"

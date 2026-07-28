@@ -1,0 +1,23 @@
+name: "Feature"
+description: "새로운 기능 개발 및 기존 기능 확장에 사용합니다."
+title: "Feature: "
+labels: ["Feature"]
+type: Task
+body:
+  - type: textarea
+    id: overview
+    attributes:
+      label: "Issue 요약"
+      placeholder: "예: 사용자가 취미를 즐겨찾기에 추가할 수 있도록 합니다."
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Issue 상세"
+      placeholder: "기능의 목적, 요구사항, 기대 동작을 작성해 주세요."
+  - type: textarea
+    id: todo
+    attributes:
+      label: "To do"
+      placeholder: "예: - [ ] 즐겨찾기 API 구현"

@@ -1,0 +1,25 @@
+name: "Hotfix"
+description: "운영 환경의 긴급 장애 및 치명적 오류 수정에 사용합니다."
+title: "Hotfix: "
+labels: ["Hotfix"]
+type: Task
+body:
+  - type: textarea
+    id: overview
+    attributes:
+      label: "Issue 요약"
+      placeholder: "예: 운영 환경의 인증 실패 문제를 긴급 수정합니다."
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Issue 상세"
+      placeholder: "영향 범위, 장애 현상, 임시 대응과 수정 방향을 작성해 주세요."
+    validations:
+      required: true
+  - type: textarea
+    id: todo
+    attributes:
+      label: "To do"
+      placeholder: "예: - [ ] 운영 장애 원인 수정"

@@ -1,0 +1,23 @@
+name: "Rename"
+description: "파일, 클래스, 변수 등 이름 변경에 사용합니다."
+title: "Rename: "
+labels: ["Rename"]
+type: Task
+body:
+  - type: textarea
+    id: overview
+    attributes:
+      label: "Issue 요약"
+      placeholder: "예: 도메인 용어에 맞게 서비스 클래스 이름을 변경합니다."
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Issue 상세"
+      placeholder: "변경 전후 이름, 변경 이유, 영향 범위를 작성해 주세요."
+  - type: textarea
+    id: todo
+    attributes:
+      label: "To do"
+      placeholder: "예: - [ ] 클래스 및 참조 이름 변경"

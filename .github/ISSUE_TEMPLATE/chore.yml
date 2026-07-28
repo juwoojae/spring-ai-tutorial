@@ -1,0 +1,23 @@
+name: "Chore"
+description: "빌드, 설정, 의존성 등 기타 유지보수 작업에 사용합니다."
+title: "Chore: "
+labels: ["Chore"]
+type: Task
+body:
+  - type: textarea
+    id: overview
+    attributes:
+      label: "Issue 요약"
+      placeholder: "예: 사용하지 않는 의존성을 정리합니다."
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Issue 상세"
+      placeholder: "작업 배경과 필요한 변경 사항을 작성해 주세요."
+  - type: textarea
+    id: todo
+    attributes:
+      label: "To do"
+      placeholder: "예: - [ ] 불필요한 의존성 제거"

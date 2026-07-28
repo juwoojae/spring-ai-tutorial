@@ -1,0 +1,23 @@
+name: "Test"
+description: "테스트 추가, 수정, 안정화 작업에 사용합니다."
+title: "Test: "
+labels: ["Test"]
+type: Task
+body:
+  - type: textarea
+    id: overview
+    attributes:
+      label: "Issue 요약"
+      placeholder: "예: 추천 서비스의 예외 상황 테스트를 추가합니다."
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Issue 상세"
+      placeholder: "테스트 대상, 시나리오, 기대 결과를 작성해 주세요."
+  - type: textarea
+    id: todo
+    attributes:
+      label: "To do"
+      placeholder: "예: - [ ] 예외 상황 단위 테스트 추가"
