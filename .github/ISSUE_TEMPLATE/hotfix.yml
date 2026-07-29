@@ -2,7 +2,6 @@ name: "Hotfix"
 description: "운영 환경의 긴급 장애 및 치명적 오류 수정에 사용합니다."
 title: "Hotfix: "
 labels: ["Hotfix"]
-type: Task
 body:
   - type: textarea
     id: overview

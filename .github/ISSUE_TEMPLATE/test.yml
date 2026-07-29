@@ -2,7 +2,6 @@ name: "Test"
 description: "테스트 추가, 수정, 안정화 작업에 사용합니다."
 title: "Test: "
 labels: ["Test"]
-type: Task
 body:
   - type: textarea
     id: overview

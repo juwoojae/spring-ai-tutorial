@@ -2,7 +2,6 @@ name: "Feature"
 description: "새로운 기능 개발 및 기존 기능 확장에 사용합니다."
 title: "Feature: "
 labels: ["Feature"]
-type: Task
 body:
   - type: textarea
     id: overview

@@ -2,7 +2,6 @@ name: "Chore"
 description: "빌드, 설정, 의존성 등 기타 유지보수 작업에 사용합니다."
 title: "Chore: "
 labels: ["Chore"]
-type: Task
 body:
   - type: textarea
     id: overview

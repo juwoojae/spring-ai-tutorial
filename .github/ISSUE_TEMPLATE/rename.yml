@@ -2,7 +2,6 @@ name: "Rename"
 description: "파일, 클래스, 변수 등 이름 변경에 사용합니다."
 title: "Rename: "
 labels: ["Rename"]
-type: Task
 body:
   - type: textarea
     id: overview

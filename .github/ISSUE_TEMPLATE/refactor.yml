@@ -2,7 +2,6 @@ name: "Refactor"
 description: "기능 변경 없는 코드 구조 개선에 사용합니다."
 title: "Refactor: "
 labels: ["Refactor"]
-type: Task
 body:
   - type: textarea
     id: overview

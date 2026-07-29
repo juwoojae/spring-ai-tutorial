@@ -2,7 +2,6 @@ name: "Remove"
 description: "사용하지 않는 코드, 기능, 파일 제거에 사용합니다."
 title: "Remove: "
 labels: ["Remove"]
-type: Task
 body:
   - type: textarea
     id: overview

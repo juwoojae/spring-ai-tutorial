@@ -2,7 +2,6 @@ name: "Init"
 description: "프로젝트, 모듈, 개발 환경의 초기 구성에 사용합니다."
 title: "Init: "
 labels: ["Init"]
-type: Task
 body:
   - type: textarea
     id: overview

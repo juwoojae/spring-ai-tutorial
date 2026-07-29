@@ -2,7 +2,6 @@ name: "Merge"
 description: "브랜치 또는 변경사항 병합 작업에 사용합니다."
 title: "Merge: "
 labels: ["Merge"]
-type: Task
 body:
   - type: textarea
     id: overview
