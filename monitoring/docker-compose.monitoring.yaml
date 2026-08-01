@@ -1,0 +1,37 @@
+services:
+  prometheus:
+    image: prom/prometheus:v2.52.0 # Prometheus 버전 고정
+    container_name: spring-ai-tutorial-prometheus # 컨테이너 이름
+    restart: unless-stopped # 장애 또는 재부팅 시 자동 재시작
+    ports:
+      - "9090:9090" # Prometheus UI
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro # 메트릭 수집 설정
+      - prometheus-data:/prometheus # 메트릭 데이터 영구 저장
+    networks:
+      - spring-ai-tutorial # Spring Boot와 통신할 네트워크
+
+  grafana:
+    image: grafana/grafana:10.4.3 # Grafana 버전 고정
+    container_name: spring-ai-tutorial-grafana # 컨테이너 이름
+    restart: unless-stopped # 장애 또는 재부팅 시 자동 재시작
+    ports:
+      - "3001:3000" # Grafana UI: localhost:3001
+    environment:
+      GF_SECURITY_ADMIN_USER: admin # 관리자 아이디
+      GF_SECURITY_ADMIN_PASSWORD: admin # 관리자 비밀번호
+      GF_USERS_ALLOW_SIGN_UP: "false" # 사용자 임의 가입 차단
+    volumes:
+      - grafana-data:/var/lib/grafana # 대시보드 및 설정 영구 저장
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro # 데이터 소스 자동 설정
+    networks:
+      - spring-ai-tutorial # Prometheus와 통신할 네트워크
+
+volumes:
+  prometheus-data: # Prometheus 영구 볼륨
+  grafana-data: # Grafana 영구 볼륨
+
+networks:
+  spring-ai-tutorial:
+    external: true # 애플리케이션 Compose가 생성한 네트워크 재사용
+    name: spring-ai-tutorial # 실제 Docker 네트워크 이름
