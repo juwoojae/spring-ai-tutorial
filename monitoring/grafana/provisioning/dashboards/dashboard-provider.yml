@@ -1,0 +1,13 @@
+apiVersion: 1
+
+providers:
+  - name: Spring AI Tutorial
+    orgId: 1
+    folder: Spring AI Tutorial
+    type: file
+    disableDeletion: false
+    updateIntervalSeconds: 10
+    allowUiUpdates: false
+    options:
+      path: /etc/grafana/provisioning/dashboards/json
+      foldersFromFilesStructure: false
