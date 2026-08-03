@@ -13,6 +13,9 @@ spring:
       max-request-size: 20MB
 
 management:
+  metrics:
+    tags:
+      application: ${spring.application.name} # Grafana JVM 대시보드의 application 변수에 사용
   endpoints:
     enabled-by-default: false        # actuator 엔드포인트 기본 전체 비활성화 (화이트리스트 방식)
     jmx:
